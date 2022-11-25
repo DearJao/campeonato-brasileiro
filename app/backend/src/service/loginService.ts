@@ -8,17 +8,15 @@ import ILogin from '../interface/ILogin';
 const JWT_SECRET = process.env.JWT_SECRET || 'jwt_secret';
 
 class LoginService {
-  public model = UserModel;
+  static async login(user: ILogin): Promise<IToken> {
+    const userInfo = await UserModel.findOne({ where: { email: user.email } }) as IUser;
 
-  async login(user: ILogin): Promise<IToken> {
-    const userInfo = await this.model.findOne({ where: { email: user.email } }) as IUser;
-
-    if (!user) {
-      throw new Error('User not found');
+    if (!userInfo) {
+      return ({ error: true, message: 'Incorrect email or password' });
     }
 
     if (!compareSync(user.password, userInfo.password)) {
-      throw new Error('Incorrect password');
+      return ({ error: true, message: 'Incorrect email or password' });
     }
 
     const tokenGenerator = jwt.sign(
@@ -29,7 +27,7 @@ class LoginService {
       },
     );
 
-    return { message: tokenGenerator };
+    return { error: false, message: tokenGenerator };
   }
 }
 
