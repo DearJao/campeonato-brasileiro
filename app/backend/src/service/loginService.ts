@@ -9,6 +9,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'jwt_secret';
 
 class LoginService {
   static async login(user: ILogin): Promise<IToken> {
+    console.log(user);
     const userInfo = await UserModel.findOne({ where: { email: user.email } }) as IUser;
 
     if (!userInfo) {
@@ -19,8 +20,10 @@ class LoginService {
       return ({ error: true, message: 'Incorrect email or password' });
     }
 
+    const { id, email } = userInfo;
+
     const tokenGenerator = jwt.sign(
-      { userId: userInfo.id },
+      { id, email },
       JWT_SECRET as string,
       {
         expiresIn: '7d',
@@ -28,6 +31,12 @@ class LoginService {
     );
 
     return { error: false, message: tokenGenerator };
+  }
+
+  static async getUserRole(email: string): Promise<{ role: string }> {
+    const userInfo = await UserModel.findOne({ where: { email } }) as IUser;
+
+    return { role: userInfo.role };
   }
 }
 

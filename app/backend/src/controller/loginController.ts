@@ -4,6 +4,7 @@ import LoginService from '../service/loginService';
 class LoginController {
   static async login(req: Request, res: Response) {
     const { email, password } = req.body;
+    console.log(req.body);
 
     const { error, message } = await LoginService.login({ email, password });
 
@@ -12,6 +13,13 @@ class LoginController {
     }
 
     return res.status(200).json({ token: message });
+  }
+
+  static async getUserRole(req: Request, res: Response) {
+    const email = req.body.user;
+    const { role } = await LoginService.getUserRole(email);
+
+    res.status(200).json({ role });
   }
 }
 
