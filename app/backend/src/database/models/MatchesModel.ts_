@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import db from '.';
-// import TeamsModel from './TeamsModel';
+import TeamsModel from './TeamsModel';
 
 class MatchesModel extends Model {
   declare id: number;
@@ -12,10 +12,10 @@ class MatchesModel extends Model {
 }
 
 MatchesModel.init({
-  id: { 
+  id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true 
+    autoIncrement: true,
   },
   homeTeam: DataTypes.INTEGER,
   homeTeamGoals: DataTypes.INTEGER,
@@ -29,13 +29,13 @@ MatchesModel.init({
   sequelize: db,
 });
 
-// TeamsModel.hasMany(MatchesModel, {
-//   foreignKey: 'homeTeam',
-// });
+TeamsModel.hasMany(MatchesModel, {
+  foreignKey: 'homeTeam',
+});
 
-// TeamsModel.hasMany(MatchesModel, {
-//   foreignKey: 'homeTeam',
-// });
+TeamsModel.hasMany(MatchesModel, {
+  foreignKey: 'awayTeam',
+});
 
 MatchesModel.belongsTo(TeamsModel, {
   foreignKey: 'home_team',
@@ -43,7 +43,7 @@ MatchesModel.belongsTo(TeamsModel, {
 });
 
 MatchesModel.belongsTo(TeamsModel, {
-  foreignKey: 'home_team',
+  foreignKey: 'away_team',
   as: 'teamAway',
 });
 
