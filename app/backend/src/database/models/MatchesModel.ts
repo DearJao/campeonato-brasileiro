@@ -12,7 +12,11 @@ class MatchesModel extends Model {
 }
 
 MatchesModel.init({
-  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   homeTeam: DataTypes.INTEGER,
   homeTeamGoals: DataTypes.INTEGER,
   awayTeam: DataTypes.INTEGER,
@@ -30,7 +34,7 @@ TeamsModel.hasMany(MatchesModel, {
 });
 
 TeamsModel.hasMany(MatchesModel, {
-  foreignKey: 'homeTeam',
+  foreignKey: 'awayTeam',
 });
 
 MatchesModel.belongsTo(TeamsModel, {
@@ -39,7 +43,7 @@ MatchesModel.belongsTo(TeamsModel, {
 });
 
 MatchesModel.belongsTo(TeamsModel, {
-  foreignKey: 'home_team',
+  foreignKey: 'away_team',
   as: 'teamAway',
 });
 

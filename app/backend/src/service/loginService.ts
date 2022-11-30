@@ -1,16 +1,17 @@
 import { compareSync } from 'bcryptjs';
-import * as jwt from 'jsonwebtoken';
 import IToken from '../interface/IToken';
-import UserModel from '../database/models/UserModel';
+import Users from '../database/models/Users';
 import IUser from '../interface/IUser';
 import ILogin from '../interface/ILogin';
-
-const JWT_SECRET = process.env.JWT_SECRET || 'jwt_secret';
+import { tokenGenerator } from '../middlewares/tokenGenerator';
 
 class LoginService {
   static async login(user: ILogin): Promise<IToken> {
-    console.log(user);
-    const userInfo = await UserModel.findOne({ where: { email: user.email } }) as IUser;
+    if (user === undefined) {
+      return ({ error: true, message: 'User is undefined' });
+    }
+
+    const userInfo = await Users.findOne({ where: { email: user.email } }) as IUser;
 
     if (!userInfo) {
       return ({ error: true, message: 'Incorrect email or password' });
@@ -20,21 +21,14 @@ class LoginService {
       return ({ error: true, message: 'Incorrect email or password' });
     }
 
-    const { id, email } = userInfo;
+    const { email } = userInfo;
 
-    const tokenGenerator = jwt.sign(
-      { id, email },
-      JWT_SECRET as string,
-      {
-        expiresIn: '7d',
-      },
-    );
-
-    return { error: false, message: tokenGenerator };
+    return { error: false, message: tokenGenerator(email) };
   }
 
   static async getUserRole(email: string): Promise<{ role: string }> {
-    const userInfo = await UserModel.findOne({ where: { email } }) as IUser;
+    // console.log(user);
+    const userInfo = await Users.findOne({ where: { email } }) as IUser;
 
     return { role: userInfo.role };
   }

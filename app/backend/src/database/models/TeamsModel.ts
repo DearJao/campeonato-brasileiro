@@ -13,10 +13,7 @@ TeamsModel.init(
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    username: DataTypes.STRING,
-    role: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
+    teamName: DataTypes.STRING,
   },
   {
     tableName: 'teams',
