@@ -36,7 +36,7 @@ describe('all tests for login route', () => {
       .send({ email: '', password: 'secret_admin' });
 
     expect(chaiHttpResponse.status).to.be.equal(400);
-    expect(chaiHttpResponse.body).to.deep.equal({ message: "All fields must be filled" });
+    expect(chaiHttpResponse.body).to.be.deep.equal({ message: "All fields must be filled" });
   });
 
   it('verify result without the password', async () => {
@@ -46,7 +46,7 @@ describe('all tests for login route', () => {
       .send({ email: 'admin@admin.com', password: '' });
 
     expect(chaiHttpResponse.status).to.be.equal(400);
-    expect(chaiHttpResponse.body).to.deep.equal({ message: "All fields must be filled" });
+    expect(chaiHttpResponse.body).to.be.deep.equal({ message: "All fields must be filled" });
   });
 
   it('verify result using a wrong email', async () => {
@@ -56,7 +56,7 @@ describe('all tests for login route', () => {
       .send({ email: 'user@admin.com', password: 'secret_admin' });
 
     expect(chaiHttpResponse.status).to.be.equal(401);
-    expect(chaiHttpResponse.body).to.deep.equal({ message: "Incorrect email or password" });
+    expect(chaiHttpResponse.body).to.be.deep.equal({ message: "Incorrect email or password" });
   });
 
   it('verify result using a wrong password', async () => {
@@ -66,6 +66,6 @@ describe('all tests for login route', () => {
       .send({ email: 'admin@admin.com', password: 'secret_user' });
 
     expect(chaiHttpResponse.status).to.be.equal(401);
-    expect(chaiHttpResponse.body).to.deep.equal({ message: "Incorrect email or password" });
+    expect(chaiHttpResponse.body).to.be.deep.equal({ message: "Incorrect email or password" });
   });
 });
