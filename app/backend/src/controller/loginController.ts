@@ -15,7 +15,6 @@ class LoginController {
 
   static async getUserRole(req: Request, res: Response) {
     const email = req.body.user;
-    console.log(req.body.user);
     const { role } = await LoginService.getUserRole(email);
 
     res.status(200).json({ role });

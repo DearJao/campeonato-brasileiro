@@ -27,7 +27,6 @@ class LoginService {
   }
 
   static async getUserRole(email: string): Promise<{ role: string }> {
-    // console.log(user);
     const userInfo = await Users.findOne({ where: { email } }) as IUser;
 
     return { role: userInfo.role };

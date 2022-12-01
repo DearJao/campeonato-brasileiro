@@ -31,9 +31,16 @@ class MatchesService {
 
   static async createMatches(match: IMatches): Promise<IMatches> {
     const creator: IMatches = await MatchesModel.create({ ...match, inProgress: true });
-    console.log('esse é o 1', creator);
 
     return creator;
+  }
+
+  static async changeStateMatches(id: number) {
+    await MatchesModel.update({ inProgress: 'false' }, {
+      where: { id },
+    });
+
+    return { message: 'Finished' };
   }
 }
 
