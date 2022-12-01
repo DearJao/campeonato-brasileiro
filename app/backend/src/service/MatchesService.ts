@@ -28,6 +28,13 @@ class MatchesService {
 
     return matchesList;
   }
+
+  static async createMatches(match: IMatches): Promise<IMatches> {
+    const creator: IMatches = await MatchesModel.create({ ...match, inProgress: true });
+    console.log('esse é o 1', creator);
+
+    return creator;
+  }
 }
 
 export default MatchesService;
