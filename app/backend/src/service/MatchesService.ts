@@ -15,19 +15,19 @@ class MatchesService {
     return matchesList;
   }
 
-  // static async getInPrgressMatches(inProgress: boolean): Promise<IMatches[]> {
-  //   const matchesList: IMatches[] = await MatchesModel.findAll({
-  //     where: { inProgress },
-  //     include: {
-  //       all: true,
-  //       attributes: {
-  //         exclude: ['id'],
-  //       },
-  //     },
-  //   });
+  static async getInProgressMatches(inProgress: boolean): Promise<IMatches[]> {
+    const matchesList: IMatches[] = await MatchesModel.findAll({
+      where: { inProgress },
+      include: {
+        all: true,
+        attributes: {
+          exclude: ['id'],
+        },
+      },
+    });
 
-  //   return matchesList;
-  // }
+    return matchesList;
+  }
 }
 
 export default MatchesService;
