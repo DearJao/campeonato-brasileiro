@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import LoginService from '../service/loginService';
-
+// teste do teste
 class LoginController {
   static async login(req: Request, res: Response) {
     const { email, password } = req.body;
