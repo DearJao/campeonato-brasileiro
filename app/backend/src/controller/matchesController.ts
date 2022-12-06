@@ -22,11 +22,11 @@ class MatchesController {
     return res.status(201).json(createdMatch);
   }
 
-  static async changeStateMatches(req: Request, res: Response) {
+  static async finishMatches(req: Request, res: Response) {
     const { id } = req.params;
 
-    const changedMatch = await MatchesService.changeStateMatches(+id);
-    return res.status(200).json(changedMatch);
+    await MatchesService.finishMatches(+id);
+    return res.status(200).json({ message: 'Finished' });
   }
 }
 

@@ -6,6 +6,6 @@ const matchesRoute = Router();
 
 matchesRoute.get('/', (req, res) => MatchesController.getAllMatches(req, res));
 matchesRoute.post('/', authToken, (req, res) => MatchesController.createMatches(req, res));
-matchesRoute.patch('/:id', (req, res) => MatchesController.changeStateMatches(req, res));
+matchesRoute.patch('/:id/finish', (req, res) => MatchesController.finishMatches(req, res));
 
 export default matchesRoute;

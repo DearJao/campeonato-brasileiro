@@ -35,12 +35,10 @@ class MatchesService {
     return creator;
   }
 
-  static async changeStateMatches(id: number) {
+  static async finishMatches(id: number): Promise<void> {
     await MatchesModel.update({ inProgress: 'false' }, {
       where: { id },
     });
-
-    return { message: 'Finished' };
   }
 }
 
