@@ -23,6 +23,14 @@ class MatchesController {
     return res.status(201).json(createdMatch);
   }
 
+  static async updateMatches(req: Request, res: Response) {
+    const { homeTeamGoals, awayTeamGoals } = req.body;
+    const { id } = req.params;
+
+    await MatchesService.updateMatches({ homeTeamGoals, awayTeamGoals }, +id);
+    return res.status(200).json({ message: 'Goals Added' });
+  }
+
   static async finishMatches(req: Request, res: Response) {
     const { id } = req.params;
 
