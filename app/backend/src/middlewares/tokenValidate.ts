@@ -8,7 +8,6 @@ export default async function authToken(req: Request, res: Response, next: NextF
     if (!token) return res.status(401).json({ message: 'Token must be a valid token' });
 
     const userId = tokenDecoded(token as string);
-    console.log(userId);
 
     req.body.user = userId.email;
 

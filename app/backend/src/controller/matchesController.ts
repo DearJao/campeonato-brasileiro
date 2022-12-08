@@ -16,7 +16,8 @@ class MatchesController {
   }
 
   static async createMatches(req: Request, res: Response) {
-    const match = req.body;
+    const { homeTeam, awayTeam, homeTeamGoals, awayTeamGoals } = req.body;
+    const match = { homeTeam, awayTeam, homeTeamGoals, awayTeamGoals, inProgress: true };
 
     const createdMatch = await MatchesService.createMatches(match);
     return res.status(201).json(createdMatch);
