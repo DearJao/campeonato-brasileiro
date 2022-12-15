@@ -39,6 +39,7 @@ class TeamStatsGenerator {
   };
 
   static createLeaderboard = ({ teamName, teamHome }: ITeam) => {
+    console.log('createleaderboard', teamName, teamHome);
     if (teamHome) {
       const ranking = {
         name: teamName,
@@ -56,7 +57,7 @@ class TeamStatsGenerator {
     }
   };
 
-  static sortRankings = (ranking: IStat[]) => {
+  static sortLeaderBoard = (ranking: IStat[]) => {
     ['goalsOwn', 'goalsFavor', 'goalsBalance', 'totalVictories', 'totalPoints'].forEach((x) => {
       ranking.sort((a: any, b: any) => {
         if (a[x] === undefined || b[x] === undefined) {
@@ -74,5 +75,6 @@ class TeamStatsGenerator {
     return ranking;
   };
 }
+// console.log(sortRanking);
 
 export default TeamStatsGenerator;

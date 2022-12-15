@@ -1,7 +1,7 @@
 import IMatches from './IMatches';
 
 interface ITeam {
-  id: number,
+  id?: number,
   teamName: string,
   teamHome?: IMatches[];
 }
