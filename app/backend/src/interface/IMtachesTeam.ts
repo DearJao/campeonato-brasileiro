@@ -9,6 +9,14 @@ interface IMatchesTeam {
     awayTeamGoals: number,
     inProgress: number,
   }
+  teamAway?: {
+    id: number,
+    homeTeam: number,
+    homeTeamGoals: number,
+    awayTeam: number,
+    awayTeamGoals: number,
+    inProgress: number,
+  }
 }
 
 export default IMatchesTeam;

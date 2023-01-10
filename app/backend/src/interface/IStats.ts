@@ -8,7 +8,7 @@ interface IStat {
   goalsFavor: number;
   goalsOwn: number;
   goalsBalance: number;
-  efficiency: string;
+  efficiency: number;
 }
 
 export default IStat;

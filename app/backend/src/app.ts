@@ -1,5 +1,5 @@
 import * as express from 'express';
-import leaderBoardRoute from './routes/leaderBoard';
+import leaderBoardRoute from './routes/leaderBoardRoute';
 import loginRouter from './routes/loginRoute';
 import matchesRoute from './routes/matchesRoute';
 import teamRoute from './routes/teamRoute';
