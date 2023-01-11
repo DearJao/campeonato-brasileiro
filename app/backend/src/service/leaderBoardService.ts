@@ -38,6 +38,6 @@ class LeaderboardService {
 
     return leaderboard.sort(LeaderboardService.sortLeaderBoardTeams);
   }
-}
+} // teste
 
 export default LeaderboardService;
