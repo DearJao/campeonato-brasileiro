@@ -26,10 +26,10 @@ const getHomeTeamStats = (teamHome: IMatches[]) => {
 };
 
 const getAwayTeamStats = (teamAway: IMatches[]) => {
-  let points = 0;
   let defeats = 0;
-  let wins = 0;
+  let points = 0;
   let ties = 0;
+  let wins = 0;
 
   teamAway.forEach(({ awayTeamGoals, homeTeamGoals }) => {
     if (awayTeamGoals > homeTeamGoals) {
@@ -68,8 +68,8 @@ const teamHomeGoals = (teamHome: IMatches[]) => {
 };
 
 const teamAwayGoals = (teamAway: IMatches[]) => {
-  const goalsFavor = teamAway.reduce((acc: number, curr) => acc + curr.homeTeamGoals, 0);
-  const goalsOwn = teamAway.reduce((acc: number, curr) => acc + curr.awayTeamGoals, 0);
+  const goalsFavor = teamAway.reduce((acc: number, curr) => acc + curr.awayTeamGoals, 0);
+  const goalsOwn = teamAway.reduce((acc: number, curr) => acc + curr.homeTeamGoals, 0);
   const goalsBalance = (goalsFavor - goalsOwn);
   return { goalsFavor, goalsOwn, goalsBalance };
 };
