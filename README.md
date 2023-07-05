@@ -49,7 +49,7 @@
 <h2><strong>.Para rodar o projeto siga as intruções:<strong></h2>
       - Instale as dependências `npm install`
       </br>
-      - Para subir o projeto completo use o comando `npm run compose:up` ou `npm run compose:up:dev`
+      - Para subir o projeto completo use o comando `npm run compose:``up` ou `npm run compose:``up``:dev`
       </br>
       (você precisa ter o docker instalado na sua maquina)
       </br>
