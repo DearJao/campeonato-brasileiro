@@ -2,18 +2,19 @@
 
 <h1><strong>Bem vindo/a ao meu projeto Campeonato Brasileiro!!<strong></h1>
 
-<h2><strong>.Sobre o projeto:<strong></h2>
+<h2><strong>.Sobre o projeto:</strong></h2>
   Esse projeto se trata de uma aplicação que retrata a tabela de pontos do campeonato brasileiro de futebol, com acesso de usuarios que passam por um processo de
-  autorização com `JsonWebToken`, para que se possa ter segurança nos dados e verificar quem é administrador para lidar com os dados. O banco de dados foi estruturado
-  para qeu não haja informações faltosas sobre o times, jogos, estatisticas ou usuários, atrazés de mensagens de erros que são disparadas ao tentar adicionar dados
-  invalidos.
+  autorização com <strong>JsonWebToken</strong>, para que se possa ter segurança nos dados e verificar quem é administrador para lidar com os dados. O banco de dados
+  foi estruturado para qeu não haja informações faltosas sobre o times, jogos, estatisticas ou usuários, atrazés de mensagens de erros que são disparadas ao tentar
+  adicionar dados invalidos.
 
-<h2><strong>.Construção e Features/Tecnologias:<strong></h2                                                                    
-      A construção foi feita através do `Docker` para que ele possa ser usado em qualquer maquina, contruido em um banco de dados relacional feito com `MySQL` e
-      `Sequelize`, rotas com feitas com `express` para facilitar a manipulação e entendimento de código, foi escrito inteiramente com `TypeScript` para se ter mais
-      segurança no código e facilitar a leitura do código, manutenção e escalabilidade da aplicação, todas as rotas e funções passaram por testes utilizando `chai`.
+<h2><strong>.Construção e Features/Tecnologias:</strong></h2                                                                    
+      A construção foi feita através do <strong>Docker</strong> para que ele possa ser usado em qualquer maquina, contruido em um banco de dados relacional feito com
+      <strong>MySQL</strong> e <strong>Sequelize</strong>, rotas com feitas com <strong>express</strong> para facilitar a manipulação e entendimento de código, foi
+      escrito inteiramente com <strong>TypeScript</strong> para se ter mais segurança no código e facilitar a leitura do código, manutenção e escalabilidade da
+      aplicação, todas as rotas efunções passaram por testes utilizando <strong>chai</strong>.
 
-<h2><strong>.Estrutura:<strong></h2>
+<h2><strong>.Estrutura:</strong></h2>
       .app</br>
       ├───├──🔸 backend</br>
       │───└──🔸 frontend</br>
@@ -46,14 +47,14 @@
       🔸 Diretorios</br>
       🔹 Arquivos</br>
 
-<h2><strong>.Para rodar o projeto siga as intruções:<strong></h2>
-      - Instale as dependências `npm install`
+<h2><strong>.Para rodar o projeto siga as intruções:</strong></h2>
+      - Instale as dependências <strong>npm install</strong>
       </br>
-      - Para subir o projeto completo use o comando `npm run compose:``up` ou `npm run compose:``up``:dev`
+      - Para subir o projeto completo use o comando <strong>npm run compose:up</strong> ou <strong>npm run compose: up:dev</strong>
       </br>
       (você precisa ter o docker instalado na sua maquina)
       </br>
 
-<h2><strong>.Através desse link você testar o bancod e do=ados com o Swagger:<strong></h2>
+<h2><strong>.Através desse link você pode testar o banco de dados com o Swagger:</strong></h2>
   </br>
       - ....
