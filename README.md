@@ -1,5 +1,3 @@
-# :construction: README customizado em construção ! :construction:
-
 <h1><strong>Bem vindo/a ao meu projeto Campeonato Brasileiro!!<strong></h1>
 
 <h2><strong>.Sobre o projeto:</strong></h2>
@@ -16,33 +14,33 @@
 
 <h2><strong>.Estrutura:</strong></h2>
       .app</br>
-      ├───├──🔸 backend</br>
-      │───└──🔸 frontend</br>
-      |───└──🔹 docker-compose.dev.yml</br>
-      |───└──🔹 docker-compose.yml</br>
-      |──────├── backend / src</br>
-      |──────────├──🔸 controller</br>
-      |──────────└──🔸 database</br>
-      |──────────└──🔸 interface</br>
-      |──────────└──🔸 middlewares</br>
-      |──────────└──🔸 routes</br>
-      |──────────└──🔸 service</br>
-      |──────────└──🔸 tests</br>
-      |──────────└──🔹 app.ts</br>
-      |──────────└──🔸 tests</br>
-      │────────────────├──🔸 mocks</br>
-      |────────────────└──🔹 change.me.test.ts</br>
-      |────────────────└──🔹 login.test.ts</br>
-      |────────────────└──🔹 matches.test.ts</br>
-      |────────────────└──🔹 team.test.ts</br>
-      |──────├── frontend / src</br>
-      |──────────├──🔸 components</br>
-      |──────────└──🔸 images</br>
-      |──────────└──🔸 pages</br>
-      |──────────└──🔸 services</br> 
-      |──────────└──🔸 styles</br>
-      |──────────└──🔹 App.js</br>
-      |──────────└──🔹 index.js</br>
+        ├──🔸 backend</br>
+        └──🔸 frontend</br>
+        └──🔹 docker-compose.dev.yml</br>
+        └──🔹 docker-compose.yml</br>
+            ├──🔸backend / src</br>
+                ├──🔸 controller</br>
+                └──🔸 database</br>
+                └──🔸 interface</br>
+                └──🔸 middlewares</br>
+                └──🔸 routes</br>
+                └──🔸 service</br>
+                └──🔸 tests</br>
+                └──🔹 app.ts</br>
+            ├──🔸 tests</br>
+            ├──🔸 mocks</br>
+                └──🔹 change.me.test.ts</br>
+                └──🔹 login.test.ts</br>
+                └──🔹 matches.test.ts</br>
+                └──🔹 team.test.ts</br>
+            ├──🔸 frontend / src</br>
+                ├──🔸 components</br>
+                └──🔸 images</br>
+                └──🔸 pages</br>
+                └──🔸 services</br> 
+                └──🔸 styles</br>
+        └──🔹 App.js</br>
+        └──🔹 index.js</br>
   .Legenda:</br>
       🔸 Diretorios</br>
       🔹 Arquivos</br>
@@ -50,6 +48,20 @@
 <h2><strong>.Para rodar o projeto siga as intruções:</strong></h2>
       - Instale as dependências <strong>npm install</strong>
       </br>
+      - Dê um git clone no seu trminal de sua maquina um pasta vazia para instalar o projeto desta maneira:
+      </br>
+        git clone git@github.com:DearJao/campeonato-brasileiro.git
+        </br>
+        </br>
+      - Em seguida você precisa entrar na pasta do projeto, através do seu gerenciador de arquivos ou no terminal.
+        </br>
+        </br>
+      - Para o projeto funcionar você precisa ter a biblioteca .NODE.JS instalada em sua maquina. Caso não tenha neste link: https://nodejs.org/en/download você tera
+      acesso ao dowload oficial da biblioteca e as intruções para configurar.
+      </br>
+(obs* o projeto foi contruido na versão 18.12.1, outras versões podem ocasionar erros inesperados)
+</br>
+</br>
       - Para subir o projeto completo use o comando <strong>npm run compose:up</strong> ou <strong>npm run compose: up:dev</strong>
       </br>
       (você precisa ter o docker instalado na sua maquina)
