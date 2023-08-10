@@ -13,7 +13,7 @@
       aplicação, todas as rotas efunções passaram por testes utilizando <strong>chai</strong>.
 
 <details>
-<h2><strong>.Estrutura:</strong></h2>
+<h2><summary><strong>.Estrutura:</strong></summary></h2>
       .app</br>
         ├──🔸 backend</br>
         └──🔸 frontend</br>
@@ -47,7 +47,7 @@
   .Legenda:</br>
       🔸 Diretorios</br>
       🔹 Arquivos</br>
-  <details>
+</details>
 
 <h2><strong>.Para rodar o projeto siga as intruções:</strong></h2>
       - Instale as dependências <strong>npm install</strong>
