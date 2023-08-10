@@ -18,27 +18,29 @@
         └──🔸 frontend</br>
         └──🔹 docker-compose.dev.yml</br>
         └──🔹 docker-compose.yml</br>
-            ├──🔸backend / src</br>
-                ├──🔸 controller</br>
-                └──🔸 database</br>
-                └──🔸 interface</br>
-                └──🔸 middlewares</br>
-                └──🔸 routes</br>
-                └──🔸 service</br>
-                └──🔸 tests</br>
-                └──🔹 app.ts</br>
-            ├──🔸 tests</br>
-            ├──🔸 mocks</br>
-                └──🔹 change.me.test.ts</br>
-                └──🔹 login.test.ts</br>
-                └──🔹 matches.test.ts</br>
-                └──🔹 team.test.ts</br>
-            ├──🔸 frontend / src</br>
-                ├──🔸 components</br>
-                └──🔸 images</br>
-                └──🔸 pages</br>
-                └──🔸 services</br> 
-                └──🔸 styles</br>
+        │    ├──🔸backend / src</br>
+        │    │    ├──🔸 controller</br>
+        │    │    └──🔸 database</br>
+        │    │    └──🔸 interface</br>
+        │    │    └──🔸 middlewares</br>
+        │    │    └──🔸 routes</br>
+        │    │    └──🔸 service</br>
+        │    │    └──🔸 tests</br>
+        │    │    └──🔹 app.ts</br>
+        │    │    ├──🔸 tests</br>
+        │    │    │   └──🔹 login.test.ts</br>
+        │    │    │   └──🔹 matches.test.ts</br>
+        │    │    │   └──🔹 team.test.ts</br>
+        │    │    ├──🔸 mocks</br>
+        │    │    │   └──🔹 loginMoks.ts</br>
+        │    │    │   └──🔹 MatchesMoks.ts</br>
+        │    │    │   └──🔹 TeamMoks.ts</br>
+        │    ├──🔸 frontend / src</br>
+        │    │    ├──🔸 components</br>
+        │    │    └──🔸 images</br>
+        │    │    └──🔸 pages</br>
+        │    │    └──🔸 services</br> 
+        │    │    └──🔸 styles</br>
         └──🔹 App.js</br>
         └──🔹 index.js</br>
   .Legenda:</br>
