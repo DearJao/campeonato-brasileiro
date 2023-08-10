@@ -12,6 +12,7 @@
       escrito inteiramente com <strong>TypeScript</strong> para se ter mais segurança no código e facilitar a leitura do código, manutenção e escalabilidade da
       aplicação, todas as rotas efunções passaram por testes utilizando <strong>chai</strong>.
 
+<details>
 <h2><strong>.Estrutura:</strong></h2>
       .app</br>
         ├──🔸 backend</br>
@@ -46,6 +47,7 @@
   .Legenda:</br>
       🔸 Diretorios</br>
       🔹 Arquivos</br>
+  <details>
 
 <h2><strong>.Para rodar o projeto siga as intruções:</strong></h2>
       - Instale as dependências <strong>npm install</strong>
