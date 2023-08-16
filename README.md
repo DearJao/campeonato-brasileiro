@@ -12,7 +12,7 @@
       escrito inteiramente com <strong>TypeScript</strong> para se ter mais segurança no código e facilitar a leitura do código, manutenção e escalabilidade da
       aplicação, todas as rotas efunções passaram por testes utilizando <strong>chai</strong>.
 
-<h2><summary><strong>.Estrutura:</strong></summary></h2>
+<h2><summary><strong>Estrutura:</strong></summary></h2>
 <details>
       .app</br>
         ├──🔸 backend</br>
@@ -50,6 +50,13 @@
 </details>
 
 <h2><strong><summary>Para rodar o projeto siga as intruções:</summary></strong></h2>
+      - Para que o projeto funcione você precisa ter a biblioteca .NODE.JS e o docker instalado em sua maquina. Caso não tenha neste link :
+      <link>https://nodejs.org/en/download</link> e neste: <link>https://www.docker.com/products/docker-desktop/</link> você tera acesso ao dowload oficial da
+      biblioteca e as intruções para configurar.
+      </br>
+      (obs* o projeto foi contruido na versão 18.12.1, outras versões podem ocasionar erros inesperados)
+      </br>
+      </br>
       - Instale as dependências <strong>npm install</strong>
       </br>
       - Dê um git clone no seu trminal de sua maquina um pasta vazia para instalar o projeto desta maneira:
@@ -60,12 +67,6 @@
       - Em seguida você precisa entrar na pasta do projeto, através do seu gerenciador de arquivos ou no terminal.
         </br>
         </br>
-      - Para o projeto funcionar você precisa ter a biblioteca .NODE.JS instalada em sua maquina. Caso não tenha neste link: https://nodejs.org/en/download você tera
-      acesso ao dowload oficial da biblioteca e as intruções para configurar.
-      </br>
-(obs* o projeto foi contruido na versão 18.12.1, outras versões podem ocasionar erros inesperados)
-</br>
-</br>
       - Para subir o projeto completo use o comando <strong>npm run compose:up</strong> ou <strong>npm run compose: up:dev</strong>
       </br>
       (você precisa ter o docker instalado na sua maquina)
