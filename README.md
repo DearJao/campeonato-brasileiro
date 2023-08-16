@@ -1,12 +1,12 @@
-<h1><strong>Bem vindo/a ao meu projeto Campeonato Brasileiro!!<strong></h1>
+<h1><strong>Bem vindo/a ao meu projeto Campeonato Brasileiro!!</strong></h1>
 
-<h2><strong><summary>Sobre o projeto:</strong></summary></h2>
+<h2><strong><summary>Sobre o projeto:</summary></strong></h2>
   Esse projeto se trata de uma aplicação que retrata a tabela de pontos do campeonato brasileiro de futebol, com acesso de usuarios que passam por um processo de
   autorização com <strong>JsonWebToken</strong>, para que se possa ter segurança nos dados e verificar quem é administrador para lidar com os dados. O banco de dados
   foi estruturado para qeu não haja informações faltosas sobre o times, jogos, estatisticas ou usuários, atrazés de mensagens de erros que são disparadas ao tentar
   adicionar dados invalidos.
 
-<h2><strong><summary>Construção e Features/Tecnologias:</strong></summary></h2
+<h2><strong><summary>Construção e Features/Tecnologias:</summary></strong></h2
       A construção foi feita através do <strong>Docker</strong> para que ele possa ser usado em qualquer maquina, contruido em um banco de dados relacional feito com
       <strong>MySQL</strong> e <strong>Sequelize</strong>, rotas com feitas com <strong>express</strong> para facilitar a manipulação e entendimento de código, foi
       escrito inteiramente com <strong>TypeScript</strong> para se ter mais segurança no código e facilitar a leitura do código, manutenção e escalabilidade da
