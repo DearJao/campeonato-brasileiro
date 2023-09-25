@@ -54,19 +54,16 @@
       <link>https://nodejs.org/en/download</link> e neste: <link>https://www.docker.com/products/docker-desktop/</link> você tera acesso ao dowload oficial da
       biblioteca e as intruções para configurar.
       </br>
-      (obs* o projeto foi contruido na versão 18.12.1, outras versões podem ocasionar erros inesperados)
-      </br>
-      </br>
-      - Instale as dependências <strong>npm install</strong>
+      (obs* o projeto foi contruido na versão 18.12.1 do node, outras versões podem ocasionar erros inesperados)
       </br>
       - Dê um git clone no seu trminal de sua maquina um pasta vazia para instalar o projeto desta maneira:
       </br>
         git clone git@github.com:DearJao/campeonato-brasileiro.git
         </br>
-        </br>
       - Em seguida você precisa entrar na pasta do projeto, através do seu gerenciador de arquivos ou no terminal.
         </br>
-        </br>
+      - Instale as dependências <strong>npm install</strong>
+      </br>
       - Para subir o projeto completo use o comando <strong>npm run compose:up</strong> ou <strong>npm run compose: up:dev</strong>
       </br>
       (você precisa ter o docker instalado na sua maquina)
